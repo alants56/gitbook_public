@@ -13,7 +13,7 @@ git init
 ### 本地仓库关联到远程仓库
 
 ```git command
-git remote add origin
+git remote add origin git@github.com:xxx.git
 ```
 
 

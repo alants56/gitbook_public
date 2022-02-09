@@ -42,3 +42,11 @@ git push origin --delete dev_1.0
 git push origin :dev_1.0
 ```
 
+
+
+### 关联新的远程分支
+
+```
+git remote set-url origin git@github.com:xxx.git
+```
+

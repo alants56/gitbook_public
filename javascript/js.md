@@ -21,4 +21,7 @@
 * hotkeys.js 捕获键盘输入和输入的组合键
 *  mind-elixir.js 思维导图
 * tesseract.js OCR识别
-* 
+* day.js
+* konva.js
+* fabric.js
+* pixi.js

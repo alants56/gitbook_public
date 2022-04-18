@@ -1,21 +1,15 @@
 # mermaid
 
-
-
 [官方文档](https://mermaid-js.github.io/mermaid/#/)
-
-
 
 ### 流程图
 
-
-
 ```mermaid
 graph TD;
-	A-->B;
-	A-->C;
-	B-->D;
-	C-->D;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
 
 ### 时序图
@@ -59,4 +53,3 @@ pie
     "Magnesium" : 10.01
     "Iron" :  5
 ```
-

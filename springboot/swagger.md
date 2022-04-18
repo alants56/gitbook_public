@@ -1,40 +1,40 @@
-# spring.io 官方教程笔记
+# Swagger
 
 
 
-### 1.Building a RESTful Web Service
+依赖
 
-
-
-@SpringBootApplication 该注解等价于如下几个注解
-
-* @Configuation：Tags the class as a source of bean definitions for the application context
-* @EnableAutoConfiguration：start adding beans based on classpath settings, other beans, and various property settings.
-* @ComponentScan：当前包下扫描其他组件，配置
-
-
-
-@RestController 表示RESTful Controller
-
-@GetMapping  HTTP GET映射等价于：
-
-* @RequestMapping(method=GET)
-
-
-
-### 2.Scheduling Tasks
-
-@EnableScheduling 确保后台时间调度进程执行
-
-
-
-@Scheduled
-
-* (fixedRate = 5000) 每隔5000ms执行一次
-* (fixedDelay = 5000) 执行完后5000ms执行一次
-* (cron=)  更加严格的时间调度
+```
+<dependency>
+  <groupId>io.springfox</groupId>
+  <artifactId>springfox-boot-starter</artifactId>
+  <version>3.0.0</version>
+</dependency>
+<dependency>
+  <groupId>io.springfox</groupId>
+  <artifactId>springfox-oas</artifactId>
+  <version>3.0.0</version>
+</dependency>
+```
 
 
 
 
+
+配置
+
+```
+@Configuration
+@EnableOpenApi
+public class SwaggerConfig {
+
+    @Bean
+    Docket docket() {
+        return new Docket(DocumentationType.OAS_30)
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.alants.jiandown.controller"))
+                .build();
+    }
+}
+```
 

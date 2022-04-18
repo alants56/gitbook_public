@@ -1,0 +1,47 @@
+# Druid
+
+
+
+依赖：
+
+```
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>druid-spring-boot-starter</artifactId>
+</dependency>
+```
+
+
+
+配置：
+
+```
+spring.datasource.druid.url=jdbc:mysql://localhost:3306/demo?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+spring.datasource.druid.username=root
+spring.datasource.druid.password=123456
+spring.datasource.druid.driver-class-name=com.mysql.cj.jdbc.Driver
+
+
+spring.datasource.druid.initialSize=10
+spring.datasource.druid.maxActive=20
+spring.datasource.druid.maxWait=60000
+spring.datasource.druid.minIdle=1
+spring.datasource.druid.timeBetweenEvictionRunsMillis=60000
+spring.datasource.druid.minEvictableIdleTimeMillis=300000
+spring.datasource.druid.testWhileIdle=true
+spring.datasource.druid.testOnBorrow=true
+spring.datasource.druid.testOnReturn=false
+spring.datasource.druid.poolPreparedStatements=true
+spring.datasource.druid.maxOpenPreparedStatements=20
+spring.datasource.druid.validationQuery=SELECT 1
+spring.datasource.druid.validation-query-timeout=500
+spring.datasource.druid.filters=stat
+
+
+spring.datasource.druid.stat-view-servlet.enabled=true
+spring.datasource.druid.stat-view-servlet.url-pattern=/druid/*
+spring.datasource.druid.stat-view-servlet.reset-enable=true
+spring.datasource.druid.stat-view-servlet.login-username=admin
+spring.datasource.druid.stat-view-servlet.login-password=123456
+```
+
